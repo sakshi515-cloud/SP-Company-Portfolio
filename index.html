@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<!-- WhatsApp Button -->
+<a href="https://wa.me/918087909478" class="whatsapp" target="_blank">💬</a>
+
+<body>
+
+<!-- Navbar -->
+<header>
+    <div class="container">
+        <a href="#hero">
+            <img src="images/logo.png.png" alt="SP Infotech" class="logo">
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div class="hero-text">
+        <h2>We Build Digital Experiences</h2>
+        <p>Professional solutions for modern businesses</p>
+        <a href="#contact" class="btn">Get in Touch</a>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section id="team" class="section gray">
+    <h2>Meet the Founders</h2>
+    <div class="cards">
+        <div class="card">
+            <h3>Sakshi Sonavane</h3>
+            <p><strong>Co-Founder & CEO</strong></p>
+            <p>Responsible for business strategy, client communication, and project management.</p>
+        </div>
+        <div class="card">
+            <h3>Priya Patil</h3>
+            <p><strong>Co-Founder & Technical Lead</strong></p>
+            <p>Handles development, design, and technical architecture of all projects.</p>
+        </div>
+    </div>
+</section>
+
+<!-- About -->
+<section id="about" class="section">
+    <h2>About Us</h2>
+    <p>We are a creative company delivering high-quality web, design, and digital solutions. Our mission is to help businesses grow online.</p>
+</section>
+
+<!-- Founders -->
+<section id="Founder" class="section gray">
+    <h2>Meet the Founders</h2>
+    <div class="cards team-cards">
+        <div class="card team-card">
+            <img src="https://png.pngtree.com/png-clipart/20250418/original/pngtree-businesswoman-wearing-suit-in-3d-cartoon-style-png-image_20824378.png" alt="Founder 1">
+            <h3>Sakshi Sonavane</h3>
+            <p class="role">Co-Founder & CEO</p>
+            <p class="bio">Leads business strategy, client communication, and ensures successful project delivery.</p>
+            <div class="social">
+                <a href="mailto:sakshisonavane515@gmail.com">📧</a>
+                <a href="https://linkedin.com" target="_blank">🔗</a>
+            </div>
+        </div>
+        <div class="card team-card">
+            <img src="https://static.vecteezy.com/system/resources/thumbnails/042/352/200/small/ai-generated-3d-rendering-of-a-cartoon-of-business-woman-standing-with-crossed-arms-on-transparent-background-ai-generated-png.png" alt="Founder 2">
+            <h3>Priya Patil</h3>
+            <p class="role">Co-Founder & Technical Lead</p>
+            <p class="bio">Responsible for development, design, and technical architecture of projects.</p>
+            <div class="social">
+                <a href="mailto:priyapatil921@gmail.com">📧</a>
+                <a href="https://linkedin.com" target="_blank">🔗</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services -->
+<section id="services" class="section gray">
+    <h2>Our Services</h2>
+    <div class="cards">
+        <div class="card">Web Development</div>
+        <div class="card">UI / UX Design</div>
+        <div class="card">Digital Marketing</div>
+    </div>
+</section>
+
+<!-- Projects -->
+<section class="projects-section">
+  <h2>Our Projects</h2>
+
+  <div class="projects-container">
+
+    <div class="project-card">
+      <img src="images/project1.png" alt="Project One">
+      <h3>Project One</h3>
+      <p>
+        The Pre-School Enrollment System is a web-based application
+        that simplifies and automates the student admission process.
+      </p>
+      <div class="stars">☆ ☆ ☆ ☆ ☆</div>
+      <p class="rating">Your Rating: 0/5</p>
+    </div>
+
+    <div class="project-card">
+      <img src="images/project2.png.webp" alt="Project Two">
+      <h3>Project Two</h3>
+      <p>
+        An e-commerce platform built for seamless shopping experience
+        and analytics.
+      </p>
+      <div class="stars">☆ ☆ ☆ ☆ ☆</div>
+      <p class="rating">Your Rating: 0/5</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="section gray">
+    <h2>Contact Us</h2>
+    <p style="text-align:center; font-size:14px; color:#555;">
+  🔒 Your information is safe with us
+</p>
+    <form id="contact-form">
+        <input type="text" name="from_name" required>
+<input type="email" name="from_email" required>
+<textarea name="message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+<!-- Rating Section -->
+<section id="rating" class="section">
+    <h2>Rate Us</h2>
+    <div class="star-rating">
+        <span class="star" data-value="1">☆</span>
+        <span class="star" data-value="2">☆</span>
+        <span class="star" data-value="3">☆</span>
+        <span class="star" data-value="4">☆</span>
+        <span class="star" data-value="5">☆</span>
+    </div>
+    <p>Your Rating: <span id="rating-value">0</span>/5</p>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>© 2026 SP Infotech. All rights reserved.</p>
+</footer>
+
+<!-- Scripts -->
+<script>
+    // Star Rating Functionality
+    const stars = document.querySelectorAll('.star-rating .star');
+    const ratingValue = document.getElementById('rating-value');
+
+    stars.forEach(star => {
+        star.addEventListener('mouseover', () => {
+            stars.forEach(s => s.classList.remove('hovered'));
+            for (let i = 0; i < star.dataset.value; i++) stars[i].classList.add('hovered');
+        });
+        star.addEventListener('mouseout', () => {
+            stars.forEach(s => s.classList.remove('hovered'));
+        });
+        star.addEventListener('click', () => {
+            stars.forEach(s => s.classList.remove('selected'));
+            for (let i = 0; i < star.dataset.value; i++) stars[i].classList.add('selected');
+            ratingValue.textContent = star.dataset.value;
+        });
+    });
+
+    // Project Card Ratings
+    document.querySelectorAll('.project-card').forEach((card, index) => {
+        const stars = card.querySelectorAll('.star-rating .star');
+        const ratingValue = card.querySelector('.rating-value');
+        const savedRating = localStorage.getItem(`project-rating-${index}`);
+        if (savedRating) {
+            ratingValue.textContent = savedRating;
+            for (let i = 0; i < savedRating; i++) stars[i].classList.add('selected');
+        }
+        stars.forEach(star => {
+            star.addEventListener('mouseover', () => {
+                stars.forEach(s => s.classList.remove('hovered'));
+                for (let i = 0; i < star.dataset.value; i++) stars[i].classList.add('hovered');
+            });
+            star.addEventListener('mouseout', () => {
+                stars.forEach(s => s.classList.remove('hovered'));
+            });
+            star.addEventListener('click', () => {
+                stars.forEach(s => s.classList.remove('selected'));
+                for (let i = 0; i < star.dataset.value; i++) stars[i].classList.add('selected');
+                ratingValue.textContent = star.dataset.value;
+                localStorage.setItem(`project-rating-${index}`, star.dataset.value);
+            });
+        });
+    });
+</script>
+
+<!-- EmailJS Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+  emailjs.init("DUDpfaSN3Sjj96-Em"); // Public Key ✔
+
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Send to Admin
+    emailjs.sendForm(
+      "service_1ve6h3d",     // SAME service ID
+      "template_5t9v6dk",   // Admin template
+      this
+    ).then(
+      function() {
+        console.log("Admin notified ✅");
+      },
+      function(error) {
+        console.log("Failed to notify admin ❌", error.text);
+      }
+    );
+
+    // Auto-reply to User
+    emailjs.sendForm(
+      "service_1ve6h3d",     // SAME service ID
+      "template_cx25ck6",   // Auto-reply template
+      this
+    ).then(
+      function() {
+        alert("Message sent successfully ✅");
+        document.getElementById("contact-form").reset();
+      },
+      function(error) {
+        alert("Failed ❌ " + error.text);
+      }
+    );
+  });
+</script>
+<h2 id="typing"></h2>
+
+<script>
+  const text = "Let’s build something great together 🚀";
+  let i = 0;
+
+  function typeEffect() {
+    if (i < text.length) {
+      document.getElementById("typing").innerHTML += text.charAt(i);
+      i++;
+      setTimeout(typeEffect, 80);
+    }
+  }
+  typeEffect();
+</script>
+
+
+
+</body>
+</html>
