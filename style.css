@@ -30,6 +30,7 @@
 }
 
 
+
 /* Responsive for mobile */
 @media (max-width: 768px) {
     .logo {
@@ -501,10 +502,13 @@ form button {
         font-size: 15px;
     }
 }
-/* Navbar base */
+/* Navbar */
 .navbar {
     background: #9aa9ac;
     padding: 15px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .nav-container {
@@ -519,9 +523,11 @@ form button {
 .logo {
     font-size: 22px;
     font-weight: bold;
+    text-decoration: none;
+    color: #000;
 }
 
-/* Menu */
+/* Menu desktop */
 .nav-links {
     list-style: none;
     display: flex;
@@ -534,31 +540,46 @@ form button {
     font-weight: 500;
 }
 
-/* Hamburger hidden on desktop */
+/* Hamburger */
 .hamburger {
     display: none;
-    font-size: 26px;
+    font-size: 28px;
     cursor: pointer;
 }
 
 /* 🔥 MOBILE VIEW */
 @media (max-width: 768px) {
 
-    /* Hide menu initially */
+    /* Center logo */
+    .logo {
+        margin: auto;
+    }
+
+    /* Hide menu */
     .nav-links {
         position: absolute;
         top: 65px;
-        right: 20px;
+        right: -250px;
         background: #9aa9ac;
         flex-direction: column;
-        width: 180px;
-        padding: 15px;
-        border-radius: 10px;
-        display: none;
+        width: 220px;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        transition: right 0.4s ease;
     }
 
+    /* Show menu */
     .nav-links.show {
-        display: flex;
+        right: 15px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links li a {
+        font-weight: 600;
     }
 
     /* Show hamburger */
@@ -566,4 +587,3 @@ form button {
         display: block;
     }
 }
-
