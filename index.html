@@ -16,27 +16,35 @@
 </div>
 
 
-<!-- Navbar -->
-<header>
-    <div class="container">
-        <a href="#hero">
-            <img src="images/logo.png.png" alt="SP Infotech" class="logo">
-        </a>
+<header class="navbar">
+    <div class="nav-container">
+
+        <!-- Logo -->
+        <div class="logo">
+            <a href="#hero">
+                <img src="images/logo.png.png" alt="SP Infotech">
+            </a>
+        </div>
+
+        <!-- Menu -->
         <nav>
-            <ul>
-                
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#about">About</a></li>
                 <li><a href="#team">Team</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li>
-</li>
-
             </ul>
         </nav>
+
+        <!-- Hamburger -->
+        <div class="hamburger" id="hamburger">☰</div>
+
     </div>
 </header>
+
+        
+
 
 <section class="hero">
     <div class="hero-overlay"></div>
@@ -300,6 +308,14 @@
 window.addEventListener("load", () => {
     document.getElementById("loader").style.display = "none";
 });
+</script>
+<script>
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("navLinks");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("show");
+    });
 </script>
 
 </body>
